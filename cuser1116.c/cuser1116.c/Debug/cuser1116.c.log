@@ -1,0 +1,13 @@
+﻿生成启动时间为 2018/11/16 23:53:41。
+     1>项目“E:\vs\daima\10.27.c\learnC\cuser1116.c\cuser1116.c\cuser1116.c.vcxproj”在节点 2 上(Build 个目标)。
+     1>ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /sdl /Od /Oy- /D _MBCS /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TC /analyze- /errorReport:prompt 1116cy.c
+         1116cy.c
+       Link:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"E:\vs\daima\10.27.c\learnC\cuser1116.c\Debug\cuser1116.c.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"E:\vs\daima\10.27.c\learnC\cuser1116.c\Debug\cuser1116.c.pdb" /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"E:\vs\daima\10.27.c\learnC\cuser1116.c\Debug\cuser1116.c.lib" /MACHINE:X86 Debug\1116cy.obj
+         cuser1116.c.vcxproj -> E:\vs\daima\10.27.c\learnC\cuser1116.c\Debug\cuser1116.c.exe
+     1>已完成生成项目“E:\vs\daima\10.27.c\learnC\cuser1116.c\cuser1116.c\cuser1116.c.vcxproj”(Build 个目标)的操作。
+
+生成成功。
+
+已用时间 00:00:01.76
