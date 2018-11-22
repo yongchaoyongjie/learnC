@@ -74,55 +74,55 @@
 //		 }
 //	 }
 //}
-//#define ROW 3
-//#define COL 3
-//int arr[ROW][COL];
-//int main(){
-//
-//	void exchange(int arr[ROW][COL]);
-//	int row;
-//	int col;
-//	for ( row = 0; row < ROW; row++){
-//		for (int col = 0; col < COL; col++){
-//			scanf("%d",&arr[row][col]);
-//		}
-//		printf("\n");
-//	}
-//	for (row = 0; row < ROW; row++){
-//		for ( col = 0; col < COL; col++){
-//			printf("%d ", arr[row][col]);
-//		}
-//		printf("\n");
-//	}
-//	exchange(arr);
-//	for (row = 0; row < ROW; row++){
-//		for (col = 0; col < COL; col++){
-//			printf("%d ", arr[row][col]);
-//		}
-//		printf("\n");
-//	}
-//	system("pause");
-//    return 0;
-//}
-//void exchange(int arr[ROW][COL]){
-//	int swap(int* a, int *b);
-//	
-//	for (int row = 0; row < ROW; row++){
-//		for (int col = row+1; col < COL; col++){//0,1与1 0
-//			swap(&arr[row][col], &arr[col][row]);
-//			/*t = arr[row][col];
-//			arr[row][col] = arr[col][row];
-//			arr[col][row] = t;*/
-//		}
-//		printf("\n");
-//	}
-//}
-//char swap(char* a, char *b){
-//char temp;
-//	temp = *a;
-//	*a = *b;
-//	*b = temp;
-//}
+#define ROW 3
+#define COL 3
+int arr[ROW][COL];
+int main(){
+
+	void exchange(int arr[ROW][COL]);
+	int row;
+	int col;
+	for ( row = 0; row < ROW; row++){
+		for (int col = 0; col < COL; col++){
+			scanf("%d",&arr[row][col]);
+		}
+		printf("\n");
+	}
+	for (row = 0; row < ROW; row++){
+		for ( col = 0; col < COL; col++){
+			printf("%d ", arr[row][col]);
+		}
+		printf("\n");
+	}
+	exchange(arr);
+	for (row = 0; row < ROW; row++){
+		for (col = 0; col < COL; col++){
+			printf("%d ", arr[row][col]);
+		}
+		printf("\n");
+	}
+	system("pause");
+    return 0;
+}
+void exchange(int arr[ROW][COL]){
+	int swap(int* a, int *b);
+	
+	for (int row = 0; row < ROW; row++){
+		for (int col = row+1; col < COL; col++){//0,1与1 0
+			swap(&arr[row][col], &arr[col][row]);
+			/*t = arr[row][col];
+			arr[row][col] = arr[col][row];
+			arr[col][row] = t;*/
+		}
+		printf("\n");
+	}
+}
+int swap(int* a, int *b){
+int temp;
+	temp = *a;
+	*a = *b;
+	*b = temp;
+}
 //int main(){
 //	void exchage(char arr[]);
 //	char arr[100];
@@ -274,51 +274,51 @@
 //	}
 //}
 //写一个函数输入一行字符将字符串中最长的的单词输出
-int main(){
-	int findword(char );
-	int longest(char test[]);
-	char test[100];
-	int i;
-	gets(test);
-	puts(test);
-	printf("最长的word是\n");
-	for (i = longest(test); findword(test[i]); i++){
-		printf("%c", test[i]);
-	}
-	printf("\n");
-	system("pause");
-	return 0;
-}
-int findword(char c){//找出单词
-	
-	if ((c >= 'a'&&c <= 'z') || (c > 'A'&&c <= 'Z')){
-		return 1;
-    }
-return 0;
-     }
-int longest(char test[]){
-	int len = 0, length = 0, flag = 1, place = 0, point;
-	for (int i = 0; i <= strlen(test); i++){
-		
-		if (findword(test[i])){
-			
-			if (flag){//为开始
-				point = i;//第
-				flag = 0;
-			}
-			else{
-				len++;//单词有多少字符
-			}
-		}
-		else{//比较字符哪个最大
-				flag = 1;
-				if (len > length){//len刚记得单词的长度
-					//length上一个单词的长度
-					length = len;
-					place = point;
-					len = 0;//清0下次又重新计算
-				}
-			}	
-		}
-	return place;
-}
+//int main(){
+//	int findword(char );
+//	int longest(char test[]);
+//	char test[100];
+//	int i;
+//	gets(test);
+//	puts(test);
+//	printf("最长的word是\n");
+//	for (i = longest(test); findword(test[i]); i++){
+//		printf("%c", test[i]);
+//	}
+//	printf("\n");
+//	system("pause");
+//	return 0;
+//}
+//int findword(char c){//找出单词
+//	
+//	if ((c >= 'a'&&c <= 'z') || (c > 'A'&&c <= 'Z')){
+//		return 1;
+//    }
+//return 0;
+//     }
+//int longest(char test[]){
+//	int len = 0, length = 0, flag = 1, place = 0, point;
+//	for (int i = 0; i <= strlen(test); i++){
+//		
+//		if (findword(test[i])){
+//			
+//			if (flag){//为开始
+//				point = i;//第
+//				flag = 0;
+//			}
+//			else{
+//				len++;//单词有多少字符
+//			}
+//		}
+//		else{//比较字符哪个最大
+//				flag = 1;
+//				if (len > length){//len刚记得单词的长度
+//					//length上一个单词的长度
+//					length = len;
+//					place = point;
+//					len = 0;//清0下次又重新计算
+//				}
+//			}	
+//		}
+//	return place;
+//}
