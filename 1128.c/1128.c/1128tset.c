@@ -54,29 +54,29 @@
 //	return 0;
 //}
 //用指针变量做实参
-//int main(){
-//	void exchage(int *arr, int n);
-//	int i;
-//	int arr[6];
-//	int *p = arr;
-//	/*for (i = 0; i < 6; i++){
-//		scanf("%d", (p + i));
-//	}*/
-//	for (i = 0; i < 6; i++,p++){
-//		scanf("%d", p);
-//	
-//	}
-//	p = arr;//让指针p重新指向首地址
-//	exchage(p, 6);
-//	/*for (i = 0; i < 6; i++){
-//		printf("%d", *(p + i));
-//	}*/
-//	for (p = arr; p < arr + 6; p++){
-//		printf("%d", *p);
-//	}
-//	system("pause");
-//	return 0;
-//}
+int main(){
+	void exchage(int *arr, int n);
+	int i;
+	int arr[6];
+	int *p = arr;
+	/*for (i = 0; i < 6; i++){
+		scanf("%d", (p + i));
+	}*/
+	for (i = 0; i < 6; i++,p++){
+		scanf("%d", p);
+	
+	}
+	p = arr;//让指针p重新指向首地址
+	exchage(p, 6);
+	/*for (i = 0; i < 6; i++){
+		printf("%d", *(p + i));
+	}*/
+	for (p = arr; p < arr + 6; p++){
+		printf("%d", *p);
+	}
+	system("pause");
+	return 0;
+}
 //void exchage(int *arr, int n){
 //	int *i, *j, mid,temp;
 //	mid = (n - 1) / 2;
@@ -132,22 +132,22 @@
 //	//}*/
 //}
 //
-//void sort(int *x, int n){
-//	int i, j, t;
-//	int k = 0;
-//	for (i = 0; i < n - 1; i++)
-//	{
-//		for (j = i + 1; j < n; i++){
-//			if (*(x + j)>*(x + k))k = j;
-//			if (k != i){
-//				t = *(x + i);
-//				*(x + i) = *(x + j);
-//				*(x + j) = t;
-//			}
-//		}
-//	}
-//}
-int main(){
+void sort(int *x, int n){
+	int i, j, t;
+	int k = 0;
+	for (i = 0; i < n - 1; i++)
+	{
+		for (j = i + 1; j < n; i++){
+			if (*(x + j)>*(x + k))k = j;
+			if (k != i){
+				t = *(x + i);
+				*(x + i) = *(x + j);
+				*(x + j) = t;
+			}
+		}
+	}
+}
+//int main(){
 	///*int a[3][4] = { { 1, 2, 3, 4 }, { 5, 6, 7, 8 },
 	//{ 9, 10, 11, 12 } };
 	//printf("%d", *(a+0));*/
@@ -232,24 +232,24 @@ int main(){
 ////数组指针里面的内容就是首元素的房间号所以首元素开始计算为6
 //printf("%d\n", strlen(&a+1));//&a为数组指针数组指针加1为跳过整个数组
 ////已经指到\0的后面数组越界所以未定义行为
-//printf("%d\n", strlen(&a[0] + 1)); //a[0]取到a在取地址指向a然后加1指向b所以为5
-	int a[3][4] = { 0 };
-	printf("%d\n", sizeof(a[0]));//!!!得到的为4个元素的和为第一行的所有元素的字节为16
-	printf("%d\n", sizeof(a[0]+1));//!!!a[0]本来是个数组但是进行运算就变成了指针所以为4
-	printf("%d\n", sizeof(*(a[0] + 1)));
-	//*(p+1)等价p[1]所以该题为a[0][1]得到的一个整数位4个字节
-	printf("%d\n", sizeof(a+1));//a为数组名a+1变成指针了为4
-	printf("%d\n", sizeof(*(a+ 1)));//!!!为a[1]第二行长度为4个元素的整型所以为16
-	//*(p+1)等价p[1]所以等价于a[1]	
-	printf("%d\n", sizeof(*(&a[0] + 1)));
-	//a[0]得到的数组a[0]然后取地址为&a[0]数组指针,数组指针加1还是数组指针
-	//就是跳过了第一行数组指向了第二行数组然后解引用得到第二行数组的本体;
-	//所以为16
-	printf("%d\n", sizeof(*a));
-	//*a相当于a[0]所以得到的为第一行的整个数组为16
-	printf("%d\n", sizeof(a[3]));
-	//a[3]为16但是下标越界sizeof在编译过程中就求出来了,但是在运行过程中
-	//访问了一个非法内存,
-	system("pause");
-	return 0;
-}
+////printf("%d\n", strlen(&a[0] + 1)); //a[0]取到a在取地址指向a然后加1指向b所以为5
+//	int a[3][4] = { 0 };
+//	printf("%d\n", sizeof(a[0]));//!!!得到的为4个元素的和为第一行的所有元素的字节为16
+//	printf("%d\n", sizeof(a[0]+1));//!!!a[0]本来是个数组但是进行运算就变成了指针所以为4
+//	printf("%d\n", sizeof(*(a[0] + 1)));
+//	//*(p+1)等价p[1]所以该题为a[0][1]得到的一个整数位4个字节
+//	printf("%d\n", sizeof(a+1));//a为数组名a+1变成指针了为4
+//	printf("%d\n", sizeof(*(a+ 1)));//!!!为a[1]第二行长度为4个元素的整型所以为16
+//	//*(p+1)等价p[1]所以等价于a[1]	
+//	printf("%d\n", sizeof(*(&a[0] + 1)));
+//	//a[0]得到的数组a[0]然后取地址为&a[0]数组指针,数组指针加1还是数组指针
+//	//就是跳过了第一行数组指向了第二行数组然后解引用得到第二行数组的本体;
+//	//所以为16
+//	printf("%d\n", sizeof(*a));
+//	//*a相当于a[0]所以得到的为第一行的整个数组为16
+//	printf("%d\n", sizeof(a[3]));
+//	//a[3]为16但是下标越界sizeof在编译过程中就求出来了,但是在运行过程中
+//	//访问了一个非法内存,
+//	system("pause");
+//	return 0;
+//}
