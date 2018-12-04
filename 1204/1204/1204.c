@@ -122,7 +122,7 @@ int main(){
 	system("pause");
 	return 0;
 }
-int lenght(char *p){
+int length(char *p){
 	int n;
 	n = 0;
 	while (*p != '\0'){
