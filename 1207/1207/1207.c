@@ -5,9 +5,19 @@
 # include<string.h>
 //用指针变量指向数组元素
 int main(){
+	printf("打印9*9的乘法口诀表\n");
+	int n=0;
+	for (int i = 1; i <= 9; i++){
+		for (int j = 1; j <=9; j++){
+			printf(" n=%d*%d",i,j);
+		}
+		printf("\n");
+	}
+	system("pause");
+	return 0;
+}
 	//	int a[5];
-	//	int *p;
-	//	printf("请输入五个数\n");
+	//	int *p;	//	printf("请输入五个数\n");
 	//	for (int i = 0; i < 5; i++){
 	//		scanf("%d", &a[i]);
 	//	}
@@ -169,22 +179,22 @@ int main(){
 	//printf("\n");
 
 //用指针变量处理
-char a[] = "i am a student";
-char b[20],*p1,*p2;
-p1 = a;
-p2 = b;
-printf("字符串a为%s\n", p1);
-while (*p1!='\0'){
-	*p2 = *p1;
-	*p1++;
-	*p2++;
-}
-//for (; *p1 != '\0'; p1++)
-//{
+//char a[] = "i am a student";
+//char b[20],*p1,*p2;
+//p1 = a;
+//p2 = b;
+//printf("字符串a为%s\n", p1);
+//while (*p1!='\0'){
 //	*p2 = *p1;
-//	p2++;
+//	*p1++;
+//	*p2++;
 //}
-printf("%s", p2);
-	system("pause");
-	return 0;
-}
+////for (; *p1 != '\0'; p1++)
+////{
+////	*p2 = *p1;
+////	p2++;
+////}
+//printf("%s", p2);
+//	system("pause");
+//	return 0;
+//}

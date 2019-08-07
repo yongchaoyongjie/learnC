@@ -235,15 +235,20 @@ binarytree*jianshejienode(int *startpreorder, int* endpreorder,
 		//左子树前序遍历的结束=前序的开始+左边的高度
 	if (left_height > 0){
 		//构建左子树,前序的第一个是根,结束就是左边高度+前序的开始
-		//构建左子树中序是开始为中序的开始,但是结束为
+		//构建左子树中序是开始为中序的开始,
+//但是结束为根减1,因为中序对称根在最中间对于左子树就是最中间-1
+		//最中间是根所以根减1
 		root->left = jianshejienode(startpreorder + 1, leftpreorderend,
 			startinorder, rootinorder - 1);
 	}
 	if (left_height <endpreorder-startpreorder){
-		//建立右子树是
+		//建立右子树开始是左边的高度小于前序遍历的开始和前序遍历的结束
+		//之差说明不是全部是左子树右右子树开始右子树构建
 		root->right = jianshejienode(leftpreorderend+1, endpreorder,
 			rootinorder+1, endinorder);
-
+//右子树的建立在根的右边,对于前序leftpreorderend = startpreorder + left_height+1
+//+1表示加根所以是右子树的开始位置,结束就是endpreorder,
+//对于右子树的开始就是中序遍历根的右边所以中序+1,右子树的结束就是中序的结束
 	}
 	return root;
 }
